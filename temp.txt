@@ -1,0 +1,30 @@
+<?php
+
+class MenuItem extends BaseObject{
+	public $menu_id;
+	public $lang;
+	public $name;
+	public $annot;
+	public $folder;
+	public $full_dir;
+	public $link;
+	public $order;
+	public $switch_on;
+	public $config;
+	public $additional_config;
+	public $icon;
+	public $image;
+	public $table_suffix;
+	public $status;
+	public $par_node;
+	public $kid_node;
+	public $updated_date;
+	
+	public function isConfigSet($name){	
+		if(strpos($this->config, '@'.$name)===false)return false;
+		return true;
+	}
+}
+
+
+?>
